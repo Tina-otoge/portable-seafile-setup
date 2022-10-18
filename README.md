@@ -49,6 +49,8 @@ login with an administrator account, head to the System Admin menu, then
 
 - Run attached to logs
   ```
-  ./attach-logs.sh
+  ./run-attached.sh
   ```
   Useful for using as a systemd service or the likes.
+  
+  An example systemd service unit file can be found at `seafile.service`.
