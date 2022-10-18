@@ -6,6 +6,10 @@ Docker and docker-compose. Using docker-compose should work, but it is not
 extensively tested.
 
 
+Runs on the port 57080 by default. Can be configured in the docker-compose.yml
+file.
+
+
 - Create a backup
   ```bash
   ./backup.sh
