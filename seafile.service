@@ -1,0 +1,10 @@
+[Unit]
+Description=Seafile
+After=network.target
+
+[Service]
+ExecStart=%h/.local/opt/seafile/run-attached.sh
+WorkingDirectory=%h/.local/opt/seafile
+
+[Install]
+WantedBy=default.target
