@@ -6,7 +6,7 @@ services:
       - MYSQL_ROOT_PASSWORD=db_dev  # Requested, set the root's password of MySQL service.
       - MYSQL_LOG_CONSOLE=true
     volumes:
-      - ./db-data:/var/lib/mysql  # Requested, specifies the path to MySQL data persistent store.
+      - ./data/db:/var/lib/mysql  # Requested, specifies the path to MySQL data persistent store.
     networks:
       - seafile-net
 
@@ -23,7 +23,7 @@ services:
       - "57080:80"
 #     - "443:443"  # If https is enabled, cancel the comment.
     volumes:
-      - ./seafile-data:/shared   # Requested, specifies the path to Seafile data persistent store.
+      - ./data/seafile:/shared   # Requested, specifies the path to Seafile data persistent store.
     environment:
       - DB_HOST=db
       - DB_ROOT_PASSWD=db_dev  # Requested, the value shuold be root's password of MySQL service.

@@ -9,6 +9,16 @@ extensively tested.
 Runs on the port 57080 by default. Can be configured in the docker-compose.yml
 file.
 
+All of the dynamic data get stored in a `data/` folder. You could also only sync
+this folder around.
+
+Before and after restoring, you may need to `./fixperms.sh` to ensure you own
+every files.
+
+After restoring, if the URL of the new server is different, you will need to
+login with an administrator account, head to the System Admin menu, then
+"Settings", and update SERVICE_URL and FILE_SERVER_ROOT with the new URL.
+
 
 - Create a backup
   ```bash
